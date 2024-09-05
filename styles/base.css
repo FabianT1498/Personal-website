@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #1E90FF;
+    --secondary-color: #202020;
+
+    --light-gray: #e5e5e5;
+    --light-gray-2: #cecece;
+    --light-gray-3: #939393;
+
+
+
+    --dark-gray: #111;
+    --white: #fff;
+
+
+
+    --font-color: var(--light-gray);
+    --bg-color: var(--secondary-color);
+    --secondary-bg-color: var(--dark-gray);
+    --brand-color: var(--primary-color);
+    --title-color: var(--primary-color);
+    --card-front-bg-color: var(--light-gray-3);
+    --card-back-bg-color: var(--light-gray-2);
+}
+
+body, html {
+    font-family: 'Lexend', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    line-height: 1.3;
+}

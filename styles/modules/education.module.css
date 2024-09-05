@@ -1,0 +1,9 @@
+.education {
+  padding: 2.5rem 0;
+
+  .education__content, .internship__content {
+    color: var(--font-color);
+    flex:0 0 45%;
+    max-width: 45%;
+  }
+}

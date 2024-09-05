@@ -4,34 +4,30 @@
     <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasra's place</title>
+    <title>PhoenixDev</title>
     <link rel="apple-touch-icon" sizes="180x180" href="files/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="files/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
     <link rel="manifest" href="files/site.webmanifest">
 
 
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
 </head> 
 
 <body>
 
     <!-------------------------- Header Area -------------------------->
-    <header class="header-area">
+    <header class="header">
         <div class="container">
-            <div class="header">
+            <div class="header__container">
                
-                <!-- <a href="" class="logo">
-                    <img src="files/signaturecropped.png" alt="" class="signature">
-                    <i class="fa fa-bolt"></i>
-                </a> -->
-                   
+                  
                 <ul class="navbar">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#home">Home</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#education">Education</a></li>
+                    <li class="navbar__item"><a class="navbar__link" href="#projects">Projects</a></li>
                     <!-- <li><a href="#contact">Contact</a></li> -->
                 </ul>
                 
@@ -44,21 +40,28 @@
     </header>
  
     <!-------------------------- Home Page -------------------------->
-    <div class="FirstElement" id="home">
-        <div class="profile-photo">
-            <img src="files/20221117_111239.jpg" alt="profile picture">
+    <div class="profile" id="home">
+        <div class="profile__picture">
+            <img src="files/profile.jpeg" alt="profile picture">
         </div>
-        <div class="profile-text">
-            <h5>Hi I'm </h5><br>
-            <h1>Kasra</h1><br>
-            <p>Welcome to my personal place. I'm a software developer with a background in Python, specializing in backend development with the Django framework. Additionally, I possess expertise in machine learning and data science, along with knowledge of various databases. With a passion for crafting robust solutions and leveraging cutting-edge technologies, I am dedicated to continual learning and growth in the dynamic field of software development.</p>
+        <div class="profile__text">
+            <h1 class="h1 profile__title">Hi I'm <br><span>Fabian Trillo</span></h1>
+            <p class="profile__intro">
+                I'm a passionate web developer with a strong focus on backend development. My expertise lies in crafting 
+                robust and scalable applications using Python, particularly with the Django framework. 
+                While backend development is my primary focus, I also have a solid foundation in frontend technologies, 
+                allowing me to build well-rounded and cohesive web solutions.
+                In addition to my web development skills, I've delved into the world of machine learning, completing a project 
+                that expanded my understanding of data and algorithms. Although machine learning isn't my main area of work, 
+                it's a field I find fascinating and may explore further in the future.
+            </p>
             
             <div class="btn-group">
                 <a href="files/Amirkasra-Kazemi.pdf" class="btn   active">Download CV</a>
                 <a href="mailto:amirkasrakazemi@gmail.com" class="btn">Contact</a>
             </div>
 
-            <div class="social">
+            <div class="profile__social">
                 <a href="mailto:amirkasrakazemi@gmail.com"><i class="fa fa-envelope"></i></a>
                 <a href="https://github.com/kasrakazemi"><i class="fa-brands fa-github"></i></a>
                 <a href="https://leetcode.com/kasra_kasra/"><i class="fa fa-code"></i></a>
@@ -67,30 +70,30 @@
         </div>
     </div>
 
-        <!-------------------------- About Section -------------------------->
-    <section class="about-area" id="about">
+    <!-------------------------- About Section -------------------------->
+    <section class="about" id="about">
         <div class="container">
-            <div class="about">
+            <div class="about__container">
                 
-                <div class="about-content">
-                    <h4>About Me</h4>
-                    <ul>
-                      <li>I'm all about tech, with a knack for diving into the nitty-gritty of Django and Django Rest Framework, while keeping my Python skills sharp.</li>
-                      <li> Fascinated by the world of data science, AI, and machine learning, I'm on a perpetual quest for knowledge and growth. Always open to feedback, I thrive on collaboration and bouncing ideas off others to create awesome solutions.</li>
-                      <li> My toolbox includes Python (with pandas, numpy, scikit-learn, and more), SQL, NoSQL, data analysis, and modeling. Currently, I'm neck-deep in backend development and loving every bit of it!</li>
+                <div class="about__content">
+                    <h2 class="h2 mb-3">About Me</h2>
+                    <ul class="about__list">
+                      <li class="about__item">I'm all about tech, with a knack for diving into the nitty-gritty of Django and Django Rest Framework, while keeping my Python skills sharp.</li>
+                      <li class="about__item"> Fascinated by the world of data science, AI, and machine learning, I'm on a perpetual quest for knowledge and growth. Always open to feedback, I thrive on collaboration and bouncing ideas off others to create awesome solutions.</li>
+                      <li class="about__item"> My toolbox includes Python (with pandas, numpy, scikit-learn, and more), SQL, NoSQL, data analysis, and modeling. Currently, I'm neck-deep in backend development and loving every bit of it!</li>
                     </ul>
                 </div>
                                   
-                <div class="about-skills">
+                <div class="about__skills">
                     <ul>
-                        <li>Name:Kasra</li>
-                        <li>Age: 28</li>     
-                        <li>From: Iran</li>
-                        <li>Email: amirkasrakazemi@gmail.com</li>
-                        <li>Availabiltiy: Full time / Part time</li>
-                        <li>Experience in python: 4yr </li>
-                        <li>Experience in back-end(Django): 2yr </li>
-                        <li>Experience in ML: 2yr </li>
+                        <li class="about__skills-item">Name:Kasra</li>
+                        <li class="about__skills-item">Age: 28</li>     
+                        <li class="about__skills-item">From: Iran</li>
+                        <li class="about__skills-item">Email: amirkasrakazemi@gmail.com</li>
+                        <li class="about__skills-item">Availabiltiy: Full time / Part time</li>
+                        <li class="about__skills-item">Experience in python: 4yr </li>
+                        <li class="about__skills-item">Experience in back-end(Django): 2yr </li>
+                        <li class="about__skills-item">Experience in ML: 2yr </li>
                     </ul>
                 </div>
             </div>
@@ -98,106 +101,100 @@
     </section>
 
 
-        <!-------------- Education & Internship -------------->
-    <section class="education-content" id="education">
+    <!-------------- Education & Internship -------------->
+    <section class="education" id="education">
         <div class="container">
-            <div class="row">
-                <div class="education ">
-                    <h3 class="title">Education</h3>
-                    <div class="row">
-                        <div class="timeline-box">
-                            <div class="timeline">
+            <div class="row space-between">
+                <div class="education__content">
+                    <h2 class="h2 mb-5">Education</h2>
+                    <div class="timeline">
 
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        Master's degree, Artificial Intelligence
-                                    </h3>
-                                    <h4 class="timeline-title">Shahid Bahonar University of Kerman</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2020-2022
-                                    </h4>
-                                </div> 
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        Bachelor's degree, Computer Engineering
-                                    </h3>
-                                    <h4 class="timeline-title">Shahid Bahonar University of Kerman</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2016-2020
-                                    </h4>
-                                </div>
-                                <!-- Timeline-item -->
-                                <!-- <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        SSLC-86%
-                                    </h3>
-                                    <h4 class="timeline-title"> Shree vidyalaya Matric Higher Secondary school</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> 2017-2018
-                                    </h4>
-                                </div> -->
-
-                            </div>
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2">
+                                Master's degree, Artificial Intelligence
+                            </h3>
+                            <h4 class="h4 mb-1">Shahid Bahonar University of Kerman</h4>
+                            <h4 class="h4">
+                                <i class="fa fa-calendar mr-2"></i>2020-2022
+                            </h4>
                         </div>
+
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2">
+                                Bachelor's degree, Computer Engineering
+                            </h3>
+                            <h4 class="h4 mb-1">Shahid Bahonar University of Kerman</h4>
+                            <h4 class="h4">
+                                <i class="fa fa-calendar mr-2"></i>2016-2020
+                            </h4>
+                        </div>
+
+                        <!-- Timeline-item -->
+                        <!-- <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-title">
+                                SSLC-86%
+                            </h3>
+                            <h4 class="timeline-title"> Shree vidyalaya Matric Higher Secondary school</h4>
+                            <h4 class="timeline-title">
+                                <i class="fa fa-calendar"></i> 2017-2018
+                            </h4>
+                        </div> -->
+
                     </div>
                 </div>
-                <div class="internship">
-                    <h3 class="title">Professional Background</h3>
-                    <div class="row">
-                        <div class="timeline-box">
-                            <div class="timeline">
-                                
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">
-                                        Web Developer
-                                    </h3>
-                                    <h4 class="timeline-title">Timcheh </h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> JAN-2019 - FEB-2020
-                                    </h4>
-                                    <li class="timeline-text">Web design and web development using wordpress, html, css
-                                    </li>
-                                </div> 
-                                <!-- Timeline-item -->
-                                <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">SQL Developer</h3>
-                                    <h4 class="timeline-title">Elmosanat Co</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> MAY-2021 - MAR 2022
-                                    </h4>
-                                    <li class="timeline-text">Develop SQL-based databases and system reporting software</li>
-                                </div>
-                                 <!-- Timeline-item -->
-                                 <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title"> Python and Machine Learning developer</h3>
-                                    <h4 class="timeline-title">Actarra </h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> JAN-2022 - MAR 2023
-                                    </h4>
-                                    <li class="timeline-text">Creating a web application for visualizing project schedules, as well as utilizing artificial intelligence to suggest improvements for project timeline management</li>
-                                </div>
-                                 <!-- Timeline-item -->
-                                 <div class="timeline-item">
-                                    <div class="circle-dot"></div>
-                                    <h3 class="timeline-title">Machine Learning Engineer</h3>
-                                    <h4 class="timeline-title">TenSurf</h4>
-                                    <h4 class="timeline-title">
-                                        <i class="fa fa-calendar"></i> JUL-2022 - JUL 2023
-                                    </h4>
-                                    <li class="timeline-text">Development of reinforcement learning (RL) models for automated trading in financial markets</li>
-                                </div>
-                                
-                            </div>
+                <div class="internship__content">
+                    <h2 class="h2 mb-5">Professional Background</h2>
+                    <div class="timeline">
+                        
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2">
+                                Web Developer
+                            </h3>
+                            <h4 class="h4 mb-2"><b>Timcheh</b></h4>
+                            <h4 class="h4 mb-2">
+                                <i class="fa fa-calendar mr-2"></i> JAN-2019 - FEB-2020
+                            </h4>
+                            <p class="text-justify">Web design and web development using wordpress, html, css
+                            </p>
+                        </div> 
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2">SQL Developer</h3>
+                            <h4 class="h4 mb-2"><b>Elmosanat Co</b></h4>
+                            <h4 class="h4 mb-2">
+                                <i class="fa fa-calendar mr-2"></i> MAY-2021 - MAR 2022
+                            </h4>
+                            <p class="text-justify">Develop SQL-based databases and system reporting software</p>
                         </div>
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2"> Python and Machine Learning developer</h3>
+                            <h4 class="h4 mb-2"><b>Actarra</b></h4>
+                            <h4 class="h4 mb-2">
+                                <i class="fa fa-calendar mr-2"></i> JAN-2022 - MAR 2023
+                            </h4>
+                            <p class="text-justify">Creating a web apppcation for visualizing project schedules, as well as utilizing artificial intelligence to suggest improvements for project timeline management</p>
+                        </div>
+                        <!-- Timeline-item -->
+                        <div class="timeline__item mb-4">
+                            <div class="circle-dot"></div>
+                            <h3 class="h3 mb-2">Machine Learning Engineer</h3>
+                            <h4 class="h4 mb-2"><b>TenSurf</b></h4>
+                            <h4 class="h4 mb-2">
+                                <i class="fa fa-calendar mr-2"></i> JUL-2022 - JUL 2023
+                            </h4>
+                            <p class="text-justify">Development of reinforcement learning (RL) models for automated trading in financial markets</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -206,35 +203,44 @@
 
 
         <!-------------------------- Projects -------------------------->
-    <section class="project-content" id="projects">
+    <section class="projects" id="projects">
         <div class="container">
-            <div class="project-title">
-                <h4>Some Of My Projects</h4>
-                <p>Discover my projects, merging creativity with innovation</p>
-            </div>
-            <div class="projects">
-                <!-- 1st Project -->
-                <div class="project">
-                    <i class="fa fa-coffee"></i>
+
+            <h2 class="h2 text-center mb-2">Some Of My Projects</h2>
+            <p class="text-center mb-7">Discover my projects, merging creativity with innovation</p>
+    
+            <div class="projects__list">
+                <div class="projects__item">
+                    <!-- <i class="fa fa-coffee"></i>
                     <h4>Cpm Checker</h4>
                     <p>Mobile application for drawing various charts and diagrams for project scheduling files (.xer) - The purpose of implementing this mobile application is visualizing the stages of project execution and extracting its features for general users. This mobile application has been developed in collaboration with the American company Actarra.</p>
-                    <a href="https://plotter.cpmplot.com/">Link To The Project</a>
+                    <a href="https://plotter.cpmplot.com/">Link To The Project</a> -->
+                    <div class="card">
+                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
+                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <button>Submit</button></div>
+                    </div>
                 </div>
-                 <!-- 2nd Project -->
-                 <div class="project">
-                    <i class="fa fa-car"></i>
-                    <h4>Cpm Diagram Maker</h4>
-                    <p>Our website is designed for project schedulers, offering streamlined diagram creation, critical path method (CPM) determination, and timeline-based calculations. Users can efficiently generate diagrams, identify critical paths, and obtain valuable insights into project scheduling for enhanced management processes.</p>
-                    <a href="https://github.com/kasrakazemi/Cpm-Diagram">Link To The Project</a>
+
+                <div class="projects__item">
+                    <!-- <i class="fa fa-coffee"></i>
+                    <h4>Cpm Checker</h4>
+                    <p>Mobile application for drawing various charts and diagrams for project scheduling files (.xer) - The purpose of implementing this mobile application is visualizing the stages of project execution and extracting its features for general users. This mobile application has been developed in collaboration with the American company Actarra.</p>
+                    <a href="https://plotter.cpmplot.com/">Link To The Project</a> -->
+                    <div class="card">
+                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
+                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <button>Submit</button></div>
+                    </div>
                 </div>
-                <!-- 3rd Project -->
-                <div class="project">
-                    <i class="fa fa-desktop"></i>
-                    <h4>Image Watermark Detection</h4>
-                    <p>Our project focuses on using Convolutional Neural Networks (CNN) to detect watermarks in images. By training the CNN model on diverse datasets, we aim to accurately identify and analyze embedded watermarks. Our system aims to provide a reliable solution for protecting digital content and preserving intellectual property rights across various industries.</p>
-                    <a href="https://github.com/kasrakazemi/Image-watermak-detection">Link To The Project</a>
+
+                <div class="projects__item">
+                    <div class="card">
+                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
+                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
+                        <button>Submit</button></div>
+                    </div>
                 </div>
-                
             </div>
         </div>
     </section>

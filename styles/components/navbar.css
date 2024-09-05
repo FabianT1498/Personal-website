@@ -1,0 +1,26 @@
+.navbar {
+    display: flex;
+    justify-content: center; /* Centering the navigation */
+    align-items: center;
+
+    .navbar__item:last-child {
+        margin-right: 0; 
+    }  
+    
+    .navbar__item {
+        margin-right: 1rem;
+        text-align: center;
+    }
+    
+    .navbar__link {
+        text-transform: capitalize;
+        display: block;
+        padding: 10px 15px; /* Adding padding for better spacing */
+        color: inherit;
+        
+        &:active, &:hover {
+            color: #1E90FF;
+        }
+    }
+}
+

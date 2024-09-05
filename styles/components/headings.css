@@ -1,0 +1,28 @@
+.h1 {
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+.h2 {
+    color: #1E90FF;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.h3 {
+    color: #1E90FF;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.h4 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: capitalize;
+}

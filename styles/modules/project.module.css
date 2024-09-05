@@ -1,0 +1,49 @@
+/*---------------------------Projects---------------------------*/
+
+.projects {
+    padding: 2.5rem 0;
+    background-color: var(--secondary-bg-color);
+    
+    .projects__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .projects__item {
+        position: relative;
+        flex: 0 1 30%;
+        height: 400px;
+    }
+}
+
+
+
+.project i {
+    background-color: #1E90FF;
+    width: 60px;
+    height: 60px;
+    color: #333;
+    font-size: 26px;
+    line-height: 60px;
+    border-radius: 50%;
+}
+
+.project h4 {
+    font-size: 26px;
+    text-transform: capitalize;
+    margin: 20px 0;
+}
+
+.project p {
+    text-align: justify;
+}
+
+.project a {
+    display: block;
+    color: #1E90FF;
+}
+
+.project:hover {
+    border-color: #1E90FF;
+}
