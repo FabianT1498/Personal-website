@@ -12,6 +12,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update the active section in the header
     updateActiveSection();
   });
+
+  document.querySelector('.projects__list').addEventListener('click', (event) => {
+    // Prevents the event from bubbling up
+    event.stopPropagation();
+
+    // Checks if the clicked element is a button
+    if (event.target.classList.contains('button') && event.target) {
+        // Finds the closest .projects__item ancestor to the clicked button
+        const projectItem = event.target.closest('.projects__item');
+
+        // If the .projects__item element is found, proceed
+        if (projectItem) {
+            // Finds the .card element inside the .projects__item
+            const card = projectItem.querySelector('.card');
+
+            // Toggles a class to rotate the card 180 degrees
+            card.classList.toggle('flipped');
+        }
+    }
+  
+});
   
   //   $(".header ul li a").click(function(e) {
   //     e.preventDefault(); 

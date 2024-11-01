@@ -1,7 +1,6 @@
 .header {
-
-    padding: 1.2rem 0;
     transition: padding 1ms;
+    padding-top: 0.5rem; 
    
     &.header--sticky {
       position: fixed;

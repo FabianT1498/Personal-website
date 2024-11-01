@@ -1,0 +1,38 @@
+.button{
+    color: var(--white);
+    background-color: var(--button-bg-color);
+    padding: 0.75rem 1.56rem;
+    border-radius: 30px;
+    border: 2px solid var(--border-color-button);
+    box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+    transition: all 0.5s ease;
+    text-align: center;
+
+    &:hover {
+        background-color: var(--button-bg-color-hover);
+    }
+
+    &.button--active {
+        border-color: var(--brand-color);
+    }
+
+    /* Modifier for small size */
+    &.button--xs {
+        padding: 0.3rem 0.4rem; /* Smaller padding */
+    }
+
+    /* Modifier for small size */
+    &.button--small {
+        padding: 0.5rem 0.6rem; /* Smaller padding */
+    }
+
+    /* Modifier for medium size */
+    &.button--medium {
+        padding: 0.75rem 1.5rem; /* Medium padding */
+    }
+
+    /* Modifier for large size */
+    &.button--large {
+        padding: 1rem 2rem; /* Larger padding */
+    }
+}

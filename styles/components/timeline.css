@@ -29,10 +29,20 @@
       content: "";
       width: 1px;
       position: absolute;
-      height: 90%;
+      height: 70%;
       left: 1rem;
       top: 50%;
       transform: translateY(-50%);
       background-color: var(--primary-color);
     }
 }
+
+@media (max-width: 576px){
+  .timeline {
+    
+    &:before {
+      height: 85%;
+    }
+  }
+}
+

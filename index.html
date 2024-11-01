@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhoenixDev</title>
@@ -10,10 +11,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="files/favicon-16x16.png">
     <link rel="manifest" href="files/site.webmanifest">
 
-
+    <link rel="stylesheet" href="vendor/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
-</head> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        class="stylesheet">
+</head>
 
 <body>
 
@@ -21,8 +23,8 @@
     <header class="header">
         <div class="container">
             <div class="header__container">
-               
-                  
+
+
                 <ul class="navbar">
                     <li class="navbar__item"><a class="navbar__link" href="#home">Home</a></li>
                     <li class="navbar__item"><a class="navbar__link" href="#about">About</a></li>
@@ -30,35 +32,32 @@
                     <li class="navbar__item"><a class="navbar__link" href="#projects">Projects</a></li>
                     <!-- <li><a href="#contact">Contact</a></li> -->
                 </ul>
-                
+
                 <div class="menu_icon">
                     <i class="fa fa-bars"></i>
                 </div>
 
             </div>
-        </div> 
+        </div>
     </header>
- 
+
     <!-------------------------- Home Page -------------------------->
-    <div class="profile" id="home">
+    <section class="section profile" id="home">
         <div class="profile__picture">
             <img src="files/profile.jpeg" alt="profile picture">
         </div>
         <div class="profile__text">
-            <h1 class="h1 profile__title">Hi I'm <br><span>Fabian Trillo</span></h1>
-            <p class="profile__intro">
-                I'm a passionate web developer with a strong focus on backend development. My expertise lies in crafting 
-                robust and scalable applications using Python, particularly with the Django framework. 
-                While backend development is my primary focus, I also have a solid foundation in frontend technologies, 
+            <h1 class="h1 profile__title mb-4">Hi I'm <br><span>Fabian Trillo</span></h1>
+            <p class="profile__intro mb-6">
+                I'm a passionate web developer with a strong focus on backend development. My expertise lies in crafting
+                robust and scalable applications using Python, particularly with the Django framework.
+                While backend development is my primary focus, I also have a solid foundation in frontend technologies,
                 allowing me to build well-rounded and cohesive web solutions.
-                In addition to my web development skills, I've delved into the world of machine learning, completing a project 
-                that expanded my understanding of data and algorithms. Although machine learning isn't my main area of work, 
-                it's a field I find fascinating and may explore further in the future.
             </p>
-            
-            <div class="btn-group">
-                <a href="files/Amirkasra-Kazemi.pdf" class="btn   active">Download CV</a>
-                <a href="mailto:amirkasrakazemi@gmail.com" class="btn">Contact</a>
+
+            <div class="profile__buttons mb-6">
+                <a href="files/Amirkasra-Kazemi.pdf" class="button button--active mr-4">Download CV</a>
+                <a href="mailto:amirkasrakazemi@gmail.com" class="button">Contact</a>
             </div>
 
             <div class="profile__social">
@@ -68,43 +67,48 @@
                 <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
-    </div>
-
+    </section>
+    
     <!-------------------------- About Section -------------------------->
-    <section class="about" id="about">
+    <section class="section about" id="about">
         <div class="container">
+            <h2 class="h2 mb-5 text-center">About Me</h2>
             <div class="about__container">
-                
-                <div class="about__content">
-                    <h2 class="h2 mb-3">About Me</h2>
-                    <ul class="about__list">
-                      <li class="about__item">I'm all about tech, with a knack for diving into the nitty-gritty of Django and Django Rest Framework, while keeping my Python skills sharp.</li>
-                      <li class="about__item"> Fascinated by the world of data science, AI, and machine learning, I'm on a perpetual quest for knowledge and growth. Always open to feedback, I thrive on collaboration and bouncing ideas off others to create awesome solutions.</li>
-                      <li class="about__item"> My toolbox includes Python (with pandas, numpy, scikit-learn, and more), SQL, NoSQL, data analysis, and modeling. Currently, I'm neck-deep in backend development and loving every bit of it!</li>
-                    </ul>
-                </div>
-                                  
                 <div class="about__skills">
                     <ul>
-                        <li class="about__skills-item">Name:Kasra</li>
-                        <li class="about__skills-item">Age: 28</li>     
-                        <li class="about__skills-item">From: Iran</li>
-                        <li class="about__skills-item">Email: amirkasrakazemi@gmail.com</li>
-                        <li class="about__skills-item">Availabiltiy: Full time / Part time</li>
-                        <li class="about__skills-item">Experience in python: 4yr </li>
-                        <li class="about__skills-item">Experience in back-end(Django): 2yr </li>
-                        <li class="about__skills-item">Experience in ML: 2yr </li>
+                        <li class="about__skills-item">Name: Fabian Trillo</li>
+                        <li class="about__skills-item">Age: 26</li>
+                        <li class="about__skills-item">From: Venezuela</li>
+                        <li class="about__skills-item">Email: fabiantrillo1498@gmail.com</li>
+                        <li class="about__skills-item">Availabiltiy: Full time</li>
+                        <li class="about__skills-item">Experience in back-end: 2yr </li>
+                        <li class="about__skills-item">Experience in python: 1yr </li>
+                        <li class="about__skills-item">Experience in ML: 1yr </li>
                     </ul>
                 </div>
+                <div class="about__separator"></div>
+                <div class="about__content">
+                    <ul class="about__list">
+                        <li class="about__item">With experience in Python, NodeJs, and PHP, my primary focus is now on Python for backend development,
+                            where I’m continuously honing my skills.</li>
+                        <li class="about__item"> I am deeply fascinated by data science, artificial intelligence, and machine learning,
+                            and I’m always on the lookout for new knowledge and opportunities for growth in these fields.</li>
+                        <li class="about__item"> My toolkit includes expertise in Python (pandas, numpy, scikit-learn, and more), 
+                            SQL databases (PostgreSQL, MariaDB, MySQL), NoSQL (MongoDB), Docker containerization, Cron jobs for automation,
+                            SSH usage, along with Javascript and React for full-stack capabilities.
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
 
 
     <!-------------- Education & Internship -------------->
-    <section class="education" id="education">
+    <section class="section education" id="education">
         <div class="container">
-            <div class="row space-between">
+            <div class="education__container">
                 <div class="education__content">
                     <h2 class="h2 mb-5">Education</h2>
                     <div class="timeline">
@@ -113,25 +117,14 @@
                         <div class="timeline__item mb-4">
                             <div class="circle-dot"></div>
                             <h3 class="h3 mb-2">
-                                Master's degree, Artificial Intelligence
+                                Bachelor of Science in Software Engineering
                             </h3>
-                            <h4 class="h4 mb-1">Shahid Bahonar University of Kerman</h4>
+                            <h4 class="h4 mb-1">Universidad Nacional Experimental de Guayana</h4>
                             <h4 class="h4">
-                                <i class="fa fa-calendar mr-2"></i>2020-2022
+                                <i class="fa fa-calendar mr-2"></i>2015 -
                             </h4>
                         </div>
 
-                        <!-- Timeline-item -->
-                        <div class="timeline__item mb-4">
-                            <div class="circle-dot"></div>
-                            <h3 class="h3 mb-2">
-                                Bachelor's degree, Computer Engineering
-                            </h3>
-                            <h4 class="h4 mb-1">Shahid Bahonar University of Kerman</h4>
-                            <h4 class="h4">
-                                <i class="fa fa-calendar mr-2"></i>2016-2020
-                            </h4>
-                        </div>
 
                         <!-- Timeline-item -->
                         <!-- <div class="timeline-item">
@@ -150,51 +143,22 @@
                 <div class="internship__content">
                     <h2 class="h2 mb-5">Professional Background</h2>
                     <div class="timeline">
-                        
+
                         <!-- Timeline-item -->
                         <div class="timeline__item mb-4">
                             <div class="circle-dot"></div>
                             <h3 class="h3 mb-2">
-                                Web Developer
+                                Web and Machine learning developer
                             </h3>
-                            <h4 class="h4 mb-2"><b>Timcheh</b></h4>
-                            <h4 class="h4 mb-2">
-                                <i class="fa fa-calendar mr-2"></i> JAN-2019 - FEB-2020
+                            <h4 class="h4 mb-2"><b>Final Year Project</b></h4>
+                            <h4 class="h4 mb-4">
+                                <i class="fa fa-calendar mr-2"></i> JUL-2023 - SEP-2024
                             </h4>
-                            <p class="text-justify">Web design and web development using wordpress, html, css
+                            <p class="text-justify"> I developed a recommendation system using link prediction techniques,
+                                specifically non negative matrix factorization and unsupervised machine learning. 
+                                The system was integrated into an e-commerce website built to support the recommendation engine.
                             </p>
-                        </div> 
-                        <!-- Timeline-item -->
-                        <div class="timeline__item mb-4">
-                            <div class="circle-dot"></div>
-                            <h3 class="h3 mb-2">SQL Developer</h3>
-                            <h4 class="h4 mb-2"><b>Elmosanat Co</b></h4>
-                            <h4 class="h4 mb-2">
-                                <i class="fa fa-calendar mr-2"></i> MAY-2021 - MAR 2022
-                            </h4>
-                            <p class="text-justify">Develop SQL-based databases and system reporting software</p>
                         </div>
-                        <!-- Timeline-item -->
-                        <div class="timeline__item mb-4">
-                            <div class="circle-dot"></div>
-                            <h3 class="h3 mb-2"> Python and Machine Learning developer</h3>
-                            <h4 class="h4 mb-2"><b>Actarra</b></h4>
-                            <h4 class="h4 mb-2">
-                                <i class="fa fa-calendar mr-2"></i> JAN-2022 - MAR 2023
-                            </h4>
-                            <p class="text-justify">Creating a web apppcation for visualizing project schedules, as well as utilizing artificial intelligence to suggest improvements for project timeline management</p>
-                        </div>
-                        <!-- Timeline-item -->
-                        <div class="timeline__item mb-4">
-                            <div class="circle-dot"></div>
-                            <h3 class="h3 mb-2">Machine Learning Engineer</h3>
-                            <h4 class="h4 mb-2"><b>TenSurf</b></h4>
-                            <h4 class="h4 mb-2">
-                                <i class="fa fa-calendar mr-2"></i> JUL-2022 - JUL 2023
-                            </h4>
-                            <p class="text-justify">Development of reinforcement learning (RL) models for automated trading in financial markets</p>
-                        </div>
-                        
                     </div>
                 </div>
             </div>
@@ -202,81 +166,147 @@
     </section>
 
 
-        <!-------------------------- Projects -------------------------->
-    <section class="projects" id="projects">
+    <!-------------------------- Projects -------------------------->
+    <section class="section projects" id="projects">
         <div class="container">
 
             <h2 class="h2 text-center mb-2">Some Of My Projects</h2>
-            <p class="text-center mb-7">Discover my projects, merging creativity with innovation</p>
-    
+            <p class="text-center mb-8">Discover my projects, merging creativity with innovation</p>
+
             <div class="projects__list">
+
+                <!-- Project #1 -->
                 <div class="projects__item">
-                    <!-- <i class="fa fa-coffee"></i>
-                    <h4>Cpm Checker</h4>
-                    <p>Mobile application for drawing various charts and diagrams for project scheduling files (.xer) - The purpose of implementing this mobile application is visualizing the stages of project execution and extracting its features for general users. This mobile application has been developed in collaboration with the American company Actarra.</p>
-                    <a href="https://plotter.cpmplot.com/">Link To The Project</a> -->
                     <div class="card">
-                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
-                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
-                        <button>Submit</button></div>
+                        <div class="card__front p-5">
+                            <i class="card__icon fa-solid fa-cart-shopping"></i>
+                            <h4 class="h4 align-self-center">Recommendation system for e-commerce</h4>
+                            <p class="card__description">A recommendation system for an e-commerce platform that combines user's interactions and link prediction techniques to offer personalized product suggestions.</p>
+                            <p class="card__role"><b>Role: </b>Full stack developer, Data scientist</p>
+                            <b class="align-self-start">Sep. 2024</b>
+                            <div class="card__buttons">
+                                <a class="button button--small" href="https://github.com/FabianT1498/e-commerce"><i class="fab fa-github mr-2"></i>View on GitHub</a>
+                                <a class="button button--small" href="#" data>Show more</a>
+                            </div>
+                        </div>
+                        <div class="card__back p-5">
+                            <b>Technologies used:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Javascript</li>
+                                <li class="card__item">Jquery</li>
+                                <li class="card__item">Python</li>
+                                <li class="card__item">Django</li>
+                                <li class="card__item">Docker</li>
+                            </ul>
+                            <p><b>Architecture:</b>Containerized monolithic architecture based on MVC</p>
+                            <b>Skills adquired:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Data Science & Machine Learning.</li>
+                                <li class="card__item">Backend Development with Django.</li>
+                                <li class="card__item">Database Management</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project #2 -->
                 <div class="projects__item">
-                    <!-- <i class="fa fa-coffee"></i>
-                    <h4>Cpm Checker</h4>
-                    <p>Mobile application for drawing various charts and diagrams for project scheduling files (.xer) - The purpose of implementing this mobile application is visualizing the stages of project execution and extracting its features for general users. This mobile application has been developed in collaboration with the American company Actarra.</p>
-                    <a href="https://plotter.cpmplot.com/">Link To The Project</a> -->
                     <div class="card">
-                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
-                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
-                        <button>Submit</button></div>
+                        <div class="card__front p-5">
+                            <i class="card__icon fa-solid fa-cart-shopping"></i>
+                            <h4 class="h4 align-self-center">Recommendation system for e-commerce</h4>
+                            <p class="card__description">A recommendation system for an e-commerce platform that combines user's interactions and link prediction techniques to offer personalized product suggestions.</p>
+                            <p class="card__role"><b>Role: </b>Full stack developer, Data scientist</p>
+                            <b class="align-self-start">Sep. 2024</b>
+                            <div class="card__buttons">
+                                <a class="button button--small" href="https://github.com/FabianT1498/e-commerce"><i class="fab fa-github mr-2"></i>View on GitHub</a>
+                                <a class="button button--small" href="#" data>Show more</a>
+                            </div>
+                        </div>
+                        <div class="card__back p-5">
+                            <b>Technologies used:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Javascript</li>
+                                <li class="card__item">Jquery</li>
+                                <li class="card__item">Python</li>
+                                <li class="card__item">Django</li>
+                                <li class="card__item">Docker</li>
+                            </ul>
+                            <p><b>Architecture:</b>Containerized monolithic architecture based on MVC</p>
+                            <b>Skills adquired:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Data Science & Machine Learning.</li>
+                                <li class="card__item">Backend Development with Django.</li>
+                                <li class="card__item">Database Management</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
+                <!-- Project #3 -->
                 <div class="projects__item">
                     <div class="card">
-                        <div class="card__front p-6"><h1>Front of Card</h1><p>This is the front of the card. It contains important information. Please see overleaf for more details.</p></div>
-                        <div class="card__back p-6"><h1>Back of Card</h1><p>Your use of this site is subject to the terms and conditions governing this and all transactions.</p>
-                        <button>Submit</button></div>
+                        <div class="card__front p-5">
+                            <i class="card__icon fa-solid fa-cart-shopping"></i>
+                            <h4 class="h4 align-self-center">Recommendation system for e-commerce</h4>
+                            <p class="card__description">A recommendation system for an e-commerce platform that combines user's interactions and link prediction techniques to offer personalized product suggestions.</p>
+                            <p class="card__role"><b>Role: </b>Full stack developer, Data scientist</p>
+                            <b class="align-self-start">Sep. 2024</b>
+                            <div class="card__buttons">
+                                <a class="button button--small" href="https://github.com/FabianT1498/e-commerce"><i class="fab fa-github mr-2"></i>View on GitHub</a>
+                                <a class="button button--small" href="#" data>Show more</a>
+                            </div>
+                        </div>
+                        <div class="card__back p-5">
+                            <b>Technologies used:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Javascript</li>
+                                <li class="card__item">Jquery</li>
+                                <li class="card__item">Python</li>
+                                <li class="card__item">Django</li>
+                                <li class="card__item">Docker</li>
+                            </ul>
+                            <p><b>Architecture:</b>Containerized monolithic architecture based on MVC</p>
+                            <b>Skills adquired:</b>
+                            <ul class="card__list">
+                                <li class="card__item">Data Science & Machine Learning.</li>
+                                <li class="card__item">Backend Development with Django.</li>
+                                <li class="card__item">Database Management</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-        <!-------------------------- Contact Me -------------------------->
+    <!-------------------------- Contact Me -------------------------->
 
-    <!-- <section class="contact-content" id="contact">
+    <section class="section contact" id="contact">
         <div class="container">
-            <div class="contact-title">
-                <h4>Contact Me</h4>
-                <p>Get In Touch</p>
-            </div>
-            <div class="contact">
-                <form name="submitToGoogleSheet">
-                    <input type="text" name="NAME" placeholder="Name" required>
-                    <input type="email" name="EMAIL" placeholder="Email" required>
-                    <input type="text" name="SUBJECT" placeholder="Subject">
-                    <textarea name="MESSAGE" placeholder="Message"></textarea>
-                    <input type="submit" value="Send Message" class="submit">
-                </form>
-                <span id="msg"></span>
-            </div>
+            <h2 class="h2 mb-3 text-center">Contact Me</h2>
+            <p class="text-center mb-8">Get In Touch</p>   
+            <form class="form">
+                <input class="mb-4 input" type="text" name="NAME" placeholder="Name" required>
+                <input class="mb-4 input" type="email" name="EMAIL" placeholder="Email" required>
+                <input class="mb-4 input" type="text" name="SUBJECT" placeholder="Subject">
+                <textarea class="mb-6 textarea" name="MESSAGE" placeholder="Message"></textarea>
+                <input type="submit" value="Send Message" class="button button--active button--small">
+            </form>
+            <span id="msg"></span>
         </div>
-    </section> -->
-        
+    </section>
+
     <!-------------------------- JS -------------------------->
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="script.js"></script>
-    
+
     <!-------------------------- Footer section -------------------------->
-   <footer class="footer">
-    <small class="message">Thanks for visiting and happy coding!</small>
-    <small class="copyright">&copy; 2024 kasra. All rights reserved.</small>
-   </footer>
+    <footer class="footer">
+        <small class="message">Thanks for visiting!</small>
+    </footer>
 
 </body>
+
 </html>

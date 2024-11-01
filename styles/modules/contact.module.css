@@ -1,0 +1,13 @@
+/*---------------------------Projects---------------------------*/
+
+.contact {
+    font-size: 1rem;
+    padding: 2.5rem 0;
+    
+    #msg{
+        color: #fff;
+        font-size: 20px;
+        margin-top: -8px;
+        display: block;
+    }
+}

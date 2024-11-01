@@ -3,13 +3,16 @@
     --secondary-color: #202020;
 
     --light-gray: #e5e5e5;
-    --light-gray-2: #cecece;
-    --light-gray-3: #939393;
-
-
+    
 
     --dark-gray: #111;
+    --dark-gray-2: #393737;
+    --dark-gray-3: #6E777D;
+    --dark-gray-4: #7D7D6E;
+
     --white: #fff;
+
+    --github-color: #24292e;
 
 
 
@@ -17,9 +20,25 @@
     --bg-color: var(--secondary-color);
     --secondary-bg-color: var(--dark-gray);
     --brand-color: var(--primary-color);
-    --title-color: var(--primary-color);
-    --card-front-bg-color: var(--light-gray-3);
-    --card-back-bg-color: var(--light-gray-2);
+    --heading-color: var(--primary-color);
+    --card-front-bg-color: var(--bg-color);
+    --card-back-bg-color: var(--bg-color);
+    --button-bg-color: var(--dark-gray-1);
+    --button-bg-color-hover: var(--dark-gray-2);
+    --border-color-button: var(--light-gray);
+    --border-color-input-form: var(--primary-color);
+
+     /* Desktop (up to 1200px) */
+     --breakpoint-lg: 1200px;
+
+     /* Tablet (up to 992px) */
+     --breakpoint-md: 992px;
+ 
+     /* Small tablet and large phones (up to 780px) */
+     --breakpoint-sm: 780px;
+ 
+     /* Mobile phones (up to 576px) */
+     --breakpoint-xs: 576px;
 }
 
 body, html {
@@ -28,5 +47,30 @@ body, html {
     font-weight: 400;
     background-color: var(--bg-color);
     color: var(--font-color);
-    line-height: 1.3;
+    line-height: 1.35;
 }
+
+@media (max-width: 1200px){
+
+    html {
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 992px){
+
+    html {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px){
+    html {
+        font-size: 0.80rem;
+    }
+}
+
+
+
+
+

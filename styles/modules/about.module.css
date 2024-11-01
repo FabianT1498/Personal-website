@@ -1,6 +1,6 @@
 .about {
-    padding: 2.5rem 0;
     background-color: var(--secondary-bg-color);
+    font-size: 1rem;
     
     .about__container {
         display: flex;
@@ -9,13 +9,13 @@
     }
 
     .about__content {
-        font-size: 1.1rem;
         flex-basis: 60%;
     }
 
     .about__list {
         color: #fff;
         text-align: justify;
+        padding-left: 1rem;
     }
     
     .about__item {
@@ -26,13 +26,17 @@
     .about__skills {
         flex-basis: 35%;
     }
+
+    .about__separator {
+        border-left: 1px solid var(--border-color-button);
+        height: 250px;
+    }
     
     .about__skills-item {
         border-bottom: 1px dashed #ddd;
         padding-bottom: 10px;
         margin-bottom: 10px;
         color: #fff;
-        font-size: 18px;
         
         &:last-child {
             border-bottom: 0;
@@ -41,5 +45,35 @@
         }
     }
     
+}
+
+@media (max-width: 780px){
+    .about {
+
+        .about__container {
+           flex-direction: column;
+           gap: 2rem;
+        }
+
+        .about__separator {
+            border-left: none;
+            border-top: 1px solid var(--border-color-button);
+            width: 80%;
+            height: 1px;
+        }
+
+        .about__content {
+            padding: 0 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 576px){
+    .about {
+
+        .about__content {
+            padding: 0 2.2rem;
+        }
+    }
 }
 

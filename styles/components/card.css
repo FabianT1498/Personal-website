@@ -8,10 +8,15 @@
     border-radius: 10px;
     transform-style: preserve-3d;
     transition: all 1s ease;
-    
-    &:hover {
+ 
+    &.flipped {
         transform: rotateY(180deg);
     }
+
+    /* &:hover {
+        transform: rotateY(180deg);
+    } */
+
     
     /* THE FRONT FACE OF THE CARD, WHICH SHOWS BY DEFAULT */
     .card__front, .card__back {
@@ -20,7 +25,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 15px;
         backface-visibility: hidden;
         overflow: hidden;
         box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2), /* sombra principal */
@@ -30,16 +35,68 @@
     
     .card__front {
         background: var(--card-front-bg-color);
-        color: #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        box-sizing: border-box;
+    }
+
+    .card__buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 4%;
     }
 
     .card__back {
-        background: var(--card-back-bg-color);
-        color: #333;
-        text-align: center;
+        background: var(--card-front-bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 0 1 auto;
         transform: rotateY(180deg);
     }
 
+    .card__description {
+          font-size: 1em;
+          text-align: justify;
+          word-spacing: -2px;
+    }
 
+    .card__icon {
+        font-size: 3em;
+        color: var(--brand-color);
+        align-self: center;
+    }
+
+    .card__item {
+        position: relative; /* Posicionamiento relativo para poder usar ::before */
+        padding-left: 25px; /* Espacio para el icono */
+       
+        &:before {
+            content: "\f00c"; /* Código Unicode para el icono de verificación de Font Awesome */
+            font-family: "Font Awesome 6 Free"; /* Fuente de Font Awesome */
+            font-weight: 900; /* Requerido para algunos estilos de icono de Font Awesome */
+            position: absolute; /* Posicionamiento absoluto del icono */
+            left: 0;
+            top: 0;
+            color: var(--brand-color); /* Color del icono */
+        }
+    }
 }
+
+@media (max-width: 780px){
+    .card {
+        .card__description {
+            word-spacing: normal;
+        }
+
+        .card__front {
+            justify-content: space-between;
+        }
+    }
+}
+
+
+
 
