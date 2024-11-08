@@ -2,6 +2,7 @@
     display: flex;
     justify-content: center; /* Centering the navigation */
     align-items: center;
+    z-index: 2;
 
     .navbar__item:last-child {
         margin-right: 0; 
@@ -20,6 +21,30 @@
         
         &:active, &:hover {
             color: #1E90FF;
+        }
+    }
+}
+
+@media (max-width: 780px){
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        bottom: 0;
+        width: 60%;
+        height: 100vh;
+        padding-top: 3rem;
+        align-items: center;
+        background-color: var(--secondary-bg-color);
+        color: white;
+        justify-content: start;
+        transition: 0.15s ease-in-out;
+        overflow: hidden; 
+
+        &.active {
+            right: 0;
         }
     }
 }

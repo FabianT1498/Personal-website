@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
   //sticky header
   window.addEventListener('scroll', (event) => {
     
-    if (window.scrollY > 1) {
-      document.querySelector('.header').classList.add('header--sticky', 'header--white')
+    if (window.scrollY > 0) {
+      document.querySelector('.header').classList.add('header--sticky', 'header--gray')
     } else {
-      document.querySelector('.header').classList.remove('header--sticky', 'header--white');
+      document.querySelector('.header').classList.remove('header--sticky', 'header--gray');
     }
 
     // Update the active section in the header
-    updateActiveSection();
+    // updateActiveSection();
   });
 
   document.querySelector('.projects__list').addEventListener('click', (event) => {
@@ -33,6 +33,44 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   
 });
+
+const menuButton = document.querySelector(".menu-button");
+const navbar = document.querySelector(".navbar");
+const body = document.body;
+
+let blurNavbar = false
+let scrollPosition = 0
+
+menuButton.addEventListener("click", () => {
+  console.log("se ejecuto el evento click")
+
+  if (blurNavbar){
+    blurNavbar = false
+    return
+  }
+  
+  // Open navbar and change menu buttton
+  scrollPosition = window.scrollY || window.pageYOffSet
+  body.classList.add('body--no-scroll');
+  navbar.classList.add("active")
+  menuButton.classList.add("active")
+  body.style.top = `-${scrollPosition}px`;
+  navbar.focus()
+});
+
+navbar.addEventListener('blur', (event) => {
+  console.log("se ejecuto el evento blur")
+  navbar.classList.remove('active');
+  menuButton.classList.remove("active")
+  body.classList.remove('body--no-scroll');
+  body.style.top = ''
+  window.scrollTo(0, scrollPosition); // Restore scroll position
+  
+
+  blurNavbar = true
+});
+
+navbar.setAttribute('tabindex', '0'); // Make it focusable
   
   //   $(".header ul li a").click(function(e) {
   //     e.preventDefault(); 
@@ -130,4 +168,5 @@ document.addEventListener('DOMContentLoaded', function() {
   //       $(".header ul li a[href='#" + target + "']").addClass("active");
   //     }
   //   });
+  // }
 })
