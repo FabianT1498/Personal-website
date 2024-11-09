@@ -96,25 +96,43 @@ ScrollReveal().reveal(".projects__list, .contact", {
   origin: "bottom"
 });
 
-  // //contact form to excel sheet
-  // const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
-  // const form = document.forms['submitToGoogleSheet']
-  // const msg = document.getElementById("msg")
+//contact form
+const form = document.getElementById("contactForm")
 
-  // form.addEventListener('submit', e => {
-  //     e.preventDefault()
-  //     fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-  //         .then(response => {
-  //             msg.innerHTML = "Message sent successfully"
-  //             setTimeout(function () {
-  //                 msg.innerHTML = ""
-  //             }, 5000)
-  //             form.reset()
-  //         })
-  //         .catch(error => console.error('Error!', error.message))
-  // })
-    
-  // });
+form.addEventListener('submit', function(e) {
+  const formData = new FormData(form);
+  e.preventDefault();
+
+  const object = Object.fromEntries(formData);
+  const json = JSON.stringify(object);
+
+  fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+    },
+    body: json
+  })
+  .then(async (response) => {
+    if (response.status == 200) {
+        Swal.fire({
+          title: 'Your email has been sent!',
+          icon: 'success',
+          confirmButtonText: 'Continue'
+        })
+    } else {
+        console.log(response);
+    }
+  })
+  .catch(error => {
+    Swal.fire({
+      title: 'Failed to send email',
+      icon: 'error',
+      confirmButtonText: 'Continue'
+    })
+  })
+});
   
   // function updateActiveSection() {
   //   var scrollPosition = $(window).scrollTop();
