@@ -16,22 +16,26 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('.projects__list').addEventListener('click', (event) => {
     // Prevents the event from bubbling up
     event.stopPropagation();
-
-    // Checks if the clicked element is a button
-    if (event.target.classList.contains('button') && event.target) {
-        // Finds the closest .projects__item ancestor to the clicked button
-        const projectItem = event.target.closest('.projects__item');
-
-        // If the .projects__item element is found, proceed
-        if (projectItem) {
-            // Finds the .card element inside the .projects__item
-            const card = projectItem.querySelector('.card');
-
-            // Toggles a class to rotate the card 180 degrees
-            card.classList.toggle('flipped');
-        }
+    let clickedLinkBtn = false;
+   
+    // // Checks if the clicked element is a button
+    if (event.target && event.target.classList.contains('button')) {
+      clickedLinkBtn = true
     }
+
+    if (!clickedLinkBtn){
+      // Finds the closest .projects__item ancestor to the clicked button
+      const projectItem = event.target.closest('.projects__item');
   
+      // If the .projects__item element is found, proceed
+      if (projectItem) {
+          // Finds the .card element inside the .projects__item
+          const card = projectItem.querySelector('.card');
+  
+          // Toggles a class to rotate the card 180 degrees
+          card.classList.toggle('flipped');
+      }
+    }  
 });
 
 const menuButton = document.querySelector(".menu-button");
@@ -72,27 +76,25 @@ navbar.addEventListener('blur', (event) => {
 
 navbar.setAttribute('tabindex', '0'); // Make it focusable
   
-  
+//Initial content revealing js
+ScrollReveal({
+  distance: "100px",
+  duration: 2000,
+  delay: 200
+});
 
-  //   //Initial content revealing js
-  //   ScrollReveal({
-  //     distance: "100px",
-  //     duration: 2000,
-  //     delay: 200
-  //   });
-  
-  //   ScrollReveal().reveal(".header a, .profile-photo, .about-content, .education", {
-  //     origin: "left"
-  //   });
-  //   ScrollReveal().reveal(".header ul, .profile-text, .about-skills, .internship", {
-  //     origin: "right"
-  //   });
-  //   ScrollReveal().reveal(".project-title, .contact-title", {
-  //     origin: "top"
-  //   });
-  //   ScrollReveal().reveal(".projects, .contact", {
-  //     origin: "bottom"
-  //   });
+ScrollReveal().reveal(".header a, .profile__picture, .about__container, .education__content", {
+  origin: "left"
+});
+ScrollReveal().reveal(".header ul, .profile__intro, .about__skills, .internship__content", {
+  origin: "right"
+});
+ScrollReveal().reveal(".projects__item .h4, .contact .h2", {
+  origin: "top"
+});
+ScrollReveal().reveal(".projects__list, .contact", {
+  origin: "bottom"
+});
 
   // //contact form to excel sheet
   // const scriptURL = 'https://script.google.com/macros/s/AKfycbzUSaaX3XmlE5m9YLOHOBrRuCh2Ohv49N9bs4bew7xPd1qlgpvXtnudDs5Xhp3jF-Fx/exec';
