@@ -83,7 +83,7 @@ ScrollReveal({
   delay: 200
 });
 
-ScrollReveal().reveal(".header a, .profile__picture, .about__container, .education__content", {
+ScrollReveal().reveal(".profile__picture, .about__container, .education__content", {
   origin: "left"
 });
 ScrollReveal().reveal(".header ul, .profile__intro, .about__skills, .internship__content", {
